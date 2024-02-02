@@ -1,0 +1,101 @@
+    if len(p) == 3:
+        p[0] = AST.Program(prog=p[2], func=p[1], pos=p.lineno(0))
+
+     2
+    p[0] = AST.FunctionDef(rettype=p[2], name=p[3], params=p[5], body=[8], pos=p.lineno(0))
+
+    3
+    p[0] = AST.FunctionDef(rettype='int', name=p[3], params=p[5], body=[8], pos=p.lineno(0))
+
+    4
+    p[0] = AST.FunctionDef(rettype=p[2], name=p[3], params=None, body=[8], pos=p.lineno(0))
+
+    5
+    p[0] = AST.FunctionDef(rettype='int', name=p[3], params=None, body=[8], pos=p.lineno(0))
+
+    6
+        if len(p) == 0:
+        p[0] = AST.Body(statement=p[1], body=p[2])
+
+    7
+    p[0] = AST.ReturnInstruction(expr=p[2], pos=p.lineno(0))
+
+    8
+    p[0] = AST.WhileInstruction(cond=p[3], while_statement=p[5], pos=p.lineno(0))
+
+    9
+        p[0] = AST.ForInstruction(id=p[3], start_expr=p[5], end_expr=p[7], for_statement=p[9], pos=p.lineno(0))
+
+    10
+        p[0] = AST.ForInstruction(id=p[3], start_expr=p[5], end_expr=p[7], for_statement=p[9], pos=p.lineno(0))
+
+    11
+        p[0] = AST.IfOrIfElseInstruction(cond=p[3], if_statement=p[5], pos=p.lineno(0), else_statement=None)
+
+    12
+        p[0] = AST.IfOrIfElseInstruction(cond=p[3], if_statement=p[5], pos=(p.lineno(1) - len(data)), else_statement=p[7])
+
+    13
+        p[0] = AST.WhileInstruction(cond=p[3], while_statement=p[5], pos=p.lineno(0))
+
+    14
+        if len(p) == 4:
+        p[0] = AST.VariableDecl(id=p[3], type=p[2], pos=p.lineno(0), expr=None)
+    elif len(p) == 6:
+        p[0] = AST.VariableDecl(id=p[3], type=p[2], pos=p.lineno(0), expr=p[5])
+
+    15
+        if len(p) == 4:
+        p[0] = AST.VariableDecl(id=p[3], type='int', pos=p.lineno(0), expr=None)
+    elif len(p) == 6:
+        p[0] = AST.VariableDecl(id=p[3], type='int', pos=p.lineno(0), expr=p[5])
+
+    16
+        if len(p) == 3:
+        p[0] = AST.ParametersList(parameters=[AST.Parameter(type=p[0], id=p[2])])
+    if len(p) == 5:
+        p[0] = AST.ParametersList(parameters=p[4].parameters + [AST.Parameter(type=p[0], id=p[2])])
+
+    17
+    p[0] = AST.ParametersList(parameters=[])
+
+    18
+    p[0] = AST.ParametersList(parameters=[])
+
+    19
+    p[0] = AST.ParametersList(parameters=[])
+
+    20
+        if len(p) == 2:
+        if p[1] == []:
+            exprs = []
+        else:
+            exprs = [p[1]]
+        p[0] = AST.ExprList(exprs=exprs)
+    elif len(p) == 4:
+        p[0] = AST.ExprList(exprs=p[3].exprs + [p[1]])
+
+    21
+        if len(p) == 2:
+        if p[1] == []:
+            exprs = []
+        else:
+            exprs = [p[1]]
+        p[0] = AST.ExprList(exprs=exprs)
+    elif len(p) == 4:
+        p[0] = AST.ExprList(exprs=p[3].exprs + [p[1]])
+
+    #22
+    p[0] = AST.FunctionCall(id=p[1], args=p[3], pos=p.lineno(0))
+
+    #23
+    p[0] = AST.OperationOnList(expr=p[1], index_expr=p[3], pos=p.lineno(0))
+
+    #24
+
+
+
+
+
+
+
